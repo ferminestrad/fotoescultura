@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fermin Estrada | Foto es cultura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Logotipo -->
+        <a href="index.html">
+            <img src="images/fec.png" alt="Logotipo" class="logo">
+        </a>
+
+        <!-- Menú de navegación (escritorio) -->
+        <nav class="desktop-menu">
+            <a href="index.html">Portfolio</a>
+            <a href="contacto.html">+info & contacto</a>
+        </nav>
+
+        <!-- Menú hamburguesa para móviles -->
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Menú desplegable móvil -->
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="index.html">Portfolio</a>
+            <a href="contacto.html">+info & contacto</a>
+        </div>
+    </header>
+
+  <!-- Galería -->
+  <section class="gallery-section">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="images/14.jpg"  class="gallery-img">
+      </div>      
+      <div class="gallery-item">
+        <img src="images/1.jpeg" class="gallery-img">
+      </div>
+      <div class="gallery-item">
+        <img src="images/3.jpeg" class="gallery-img">
+      </div>
+      <div class="gallery-item">
+        <img src="images/8.jpg"  class="gallery-img">
+      </div>
+       <div class="gallery-item">
+        <img src="images/9.JPG" class="gallery-img">
+      </div>
+      <div class="gallery-item">
+        <img src="images/2.jpg"  class="gallery-img">
+      </div>
+      <div class="gallery-item">
+        <img src="images/13.JPG" class="gallery-img">
+      </div>
+      <div class="gallery-item">
+        <img src="images/10.jpeg"  class="gallery-img">
+      </div>
+
+      <!-- … más imágenes … -->
+    </div>
+  </section>
+
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" id="lb-close">&times;</span>
+    <img id="lb-img" class="lightbox-img">
+    <div id="lb-caption" class="lightbox-caption"></div>
+    <span class="nav prev" id="lb-prev">&#10094;</span>
+    <span class="nav next" id="lb-next">&#10095;</span>
+  </div>
+
+  <script src="main.js"></script>
+  
+
+
+
+
+   <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+
+      <script>
+    // Cuando todas las imágenes hayan cargado, chequeamos su orientación
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        if (img.naturalWidth > img.naturalHeight) {
+          img.closest('.gallery-item').classList.add('horizontal');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // Lógica para el menú hamburguesa
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+</script>
+  
+
+
+</body>
+</html>

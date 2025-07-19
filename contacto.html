@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="cont.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html">
+        <img src="images/fec.png" alt="Logotipo" class="logo">
+    </a>
+    <nav class="desktop-menu">
+        <a href="index.html">Portfolio</a>
+        <a href="contacto.html">+info & contacto</a>
+    </nav>
+
+    <!-- Menú hamburguesa para móviles -->
+    <div class="menu-toggle" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Menú desplegable móvil -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="index.html">Portfolio</a>
+        <a href="contacto.html">+info & contacto</a>
+    </div>
+</header>
+
+<div class="sections-container">
+    <!-- Sobre mí -->
+    <section class="about-section">
+        <h1>Sobre mí</h1>
+        <p>¡Hola! Soy Fermin Estrada, fotógrafo de conciertos radicado en la Ciudad de México. He inmortalizado a artistas nacionales e internacionales, retratando la esencia sonora de cada show. Para mí, cada disparo transforma, la música y estilo de vida en la fotografía es cultura. </p>
+    </section>
+  
+    <!-- Contacto -->
+    <section class="contact-section">
+        <h1>Contacto</h1>
+        <div class="contact-container">
+            <p><a href="mailto:estradabuendiafermin@gmail.com">estradabuendiafermin@gmail.com</a></p>
+            <p><a href="https://wa.me/7351030557" target="_blank" rel="noopener noreferrer">+527351030557</a></p>
+            <p><a href="https://www.instagram.com/fermineb/" target="_blank" rel="noopener noreferrer" >@fermineb</a></p>
+        </div>
+    </section>
+
+    <!-- Foto de perfil -->
+    <section class="photo-section">
+        <img src="images/0.jpg" alt="Foto de perfil">
+    </section>
+
+</div>
+
+
+<script>
+    // Lógica para el menú hamburguesa
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

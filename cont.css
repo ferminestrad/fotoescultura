@@ -1,0 +1,126 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(255, 253, 253);
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #000; /* Fondo negro */
+    display: flex; /* Utiliza flexbox */
+    justify-content: space-between; /* Alinea los elementos al inicio y al final */
+    align-items: center; /* Centra verticalmente los elementos */
+    padding: 20px;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+header nav a {
+    color: white; /* Color blanco para los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    margin: 0 10px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para las secciones horizontales */
+.sections-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye las secciones uniformemente */
+    align-items: center; /* Centra verticalmente las secciones */
+    padding: 50px 20px;
+    gap: 20px;
+}
+
+.photo-section img {
+    width: 300px; /* Ajusta el ancho deseado */
+    height: auto; /* Igual que el ancho para hacerlo cuadrado */
+    object-fit: cover; /* Asegura que la imagen se ajuste al cuadro */
+    border-radius: 10px; /* Opcional: esquinas ligeramente redondeadas */
+    margin: 20px auto;
+    display: block;
+}
+
+.about-section, .contact-section {
+    text-align: justify; /* Alineación del texto a la izquierda */
+    max-width: 300px; /* Limita el ancho de las secciones */
+}
+
+.about-section h1, .contact-section h1 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces en la sección de contacto */
+.contact-container a {
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+}
+
+.contact-container a:hover {
+    text-decoration: underline;
+}
+
+/* Menú hamburguesa (oculto en pantallas grandes) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: black;
+    padding: 10px;
+    border-radius: 8px;
+    flex-direction: column;
+}
+
+.mobile-menu a {
+    color: white;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .sections-container {
+        flex-direction: column; /* Cambia a diseño vertical en pantallas pequeñas */
+    }
+
+    .about-section, .contact-section {
+        text-align: center;
+        max-width: none; /* Permite que ocupen todo el ancho disponible */
+    }
+
+    header nav {
+        display: none; /* Ocultar menú estándar */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+}
