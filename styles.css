@@ -17,7 +17,6 @@ header {
     padding: 20px;
 }
 
-
 /* Hero */
 .hero {
   height: 100%;
@@ -54,7 +53,7 @@ header {
   object-fit: cover;    /* recorta el exceso manteniendo proporción */
 }
 .gallery-item img:hover {
-  transform: scale(1.1  );
+  transform: scale(1.1);
 }
 /* Si la imagen es horizontal, ocupa ambas columnas */
 .gallery-item.horizontal {
@@ -67,7 +66,6 @@ header {
     grid-template-columns: 1fr;
   }
 }
-
 
 /* Lightbox */
 .lightbox {
@@ -97,6 +95,23 @@ header {
   font-size: 2.5rem;
   color: var(--white);
   cursor: pointer;
+}
+
+/* 🔹 Estilos del deslizador dentro del Lightbox */
+.slider-container {
+  position: absolute;
+  bottom: 20px;   /* Se ubica abajo */
+  left: 50%;      /* Centrado horizontal */
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  padding: 8px 15px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#colorSlider {
+  width: 200px;
 }
 
 /* Responsive */
@@ -189,7 +204,6 @@ section {
         display: flex; /* Mostrar el menú móvil cuando se activa */
     }
 }
-
 
 /* Estilos del modal */
 .modal {
